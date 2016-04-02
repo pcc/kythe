@@ -274,6 +274,13 @@ new_git_repository(
     remote = "https://github.com/jmhodges/levigo.git",
 )
 
+new_git_repository(
+    name = "go_codesearch",
+    build_file = "third_party/go/codesearch.BUILD",
+    commit = "a45d81b686e85d01f2838439deaf72126ccd5a96",
+    remote = "https://github.com/google/codesearch.git",
+)
+
 maven_jar(
     name = "com_google_auto_value",
     artifact = "com.google.auto.value:auto-value:1.3",
