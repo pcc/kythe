@@ -479,6 +479,7 @@ uint8* ExtensionSet::Extension::InternalSerializeFieldWithCachedSizesToArray(
         HANDLE_TYPE(    ENUM,     Enum,    enum);
 #undef HANDLE_TYPE
 
+#pragma clang diagnostic ignored "-Wenum-compare-switch"
         case WireFormatLite::TYPE_STRING:
         case WireFormatLite::TYPE_BYTES:
         case WireFormatLite::TYPE_GROUP:

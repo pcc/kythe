@@ -23,6 +23,7 @@
 #include "llvm/Support/MemoryBuffer.h"
 #include "rapidjson/document.h"
 
+#include <functional>
 #include <map>
 #include <memory>
 

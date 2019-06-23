@@ -55,6 +55,7 @@ class MarkedSourceGenerator {
   MarkedSourceGenerator(MarkedSourceCache *cache, const clang::NamedDecl *decl)
       : cache_(cache), decl_(decl) {}
 
+#pragma clang diagnostic ignored "-Wunused-private-field"
   /// The cache to consult (and to use to get at ::Sema and friends).
   MarkedSourceCache *cache_;
 

@@ -2923,7 +2923,7 @@ MaybeFew<GraphObserver::NodeId> IndexerASTVisitor::ApplyBuiltinTypeConstructor(
     const char *BuiltinName, const MaybeFew<GraphObserver::NodeId> &Param) {
   GraphObserver::NodeId TyconID(Observer.getNodeIdForBuiltinType(BuiltinName));
   return Param.Map<GraphObserver::NodeId>(
-      [this, &TyconID, &BuiltinName](const GraphObserver::NodeId &Elt) {
+      [this, &TyconID](const GraphObserver::NodeId &Elt) {
         return Observer.recordTappNode(TyconID, {&Elt}, 1);
       });
 }

@@ -226,6 +226,8 @@ class FieldGroup {
   // used in a vector.
 };
 
+#pragma clang diagnostic ignored "-Wenum-compare-switch"
+
 // Helper for the code that emits the Clear() method.
 bool CanInitializeByZeroing(const FieldDescriptor* field) {
   if (field->is_repeated() || field->is_extension()) return false;
